@@ -15,8 +15,15 @@
  * Example: export const getPromise = (bool) = return <Your promise constructor code>
  */
 
-export const getPromise = () => {
+export const getPromise = (bool) => {
   // Your code goes here...
+  const tempPromise = new Promise((resolve, reject) => {
+    resolve("The PROMISE was RESOLVED");
+    reject("The PROMISE was REJECTED");
+  });
+
+  if (bool) return tempPromise.then((data) => data);
+  return tempPromise.then(null, (reason) => reason);
 };
 
 /**
@@ -28,8 +35,12 @@ export const getPromise = () => {
  * The handlePromise() function must be exported
  */
 
-export const handlePromise = () => {
+export const handlePromise = (promise) => {
   // Your code goes here...
+  return promise.then(
+    (data) => data,
+    (reason) => "Uh Oh"
+  );
 };
 
 // === TEST YOURSELF ===
