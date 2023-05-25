@@ -4,7 +4,6 @@
  * In this task you need to refactor the resolved promise with a shortcut of Promise.resolve()
  * Then refactor the promise constructors with shortcuts.
  */
- */
 
 // === RESOLVED PROMISE
 // Update the promiseResolved variable to use the shortcut syntax
