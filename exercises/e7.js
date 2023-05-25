@@ -4,7 +4,6 @@
  * * "07 To-reject-or-to-resolve.md"
  * * "07 Error-handling.md"
  */
- */
 
 /**
  * @task
