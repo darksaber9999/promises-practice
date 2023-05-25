@@ -33,6 +33,8 @@ export const getPromise = (input) => {
  * * if you have solved it successfully, the updateSumValue() function will return the value of 10;
  */
 export const updateSumValue = () => {
+ */
+export const updateSumValue = () => {
   // Your code goes here...
   let sum = 2;
   getPromise(120).then((data) => (sum += data));

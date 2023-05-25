@@ -7,6 +7,8 @@
  * Example: export const attachTitle = (arg) => {<Your_code>}
  *          export const Promise
  */
+ *          export const Promise
+ */
 
 export const attachTitle = (name) => {
   // Your code goes here...
@@ -19,6 +21,7 @@ export const attachTitle = (name) => {
  * * Returns a fulfilled promise with a value of `'MANHATTAN'`.
  * * Build a promise chain off the promise we just constructed that first calls `attachTitle` then calls `console.log`.
  * If your program runs successfully, it should print out and return “DR. MANHATTAN” which is extremely exciting.
+ */
  */
 
 export const getPromise = () => {
