@@ -4,6 +4,7 @@
  * * "07 To-reject-or-to-resolve.md"
  * * "07 Error-handling.md"
  */
+ */
 
 /**
  * @task
@@ -19,8 +20,15 @@
  *          }
  */
 
-export function parsePromised() {
+export function parsePromised(json_string) {
   // Your code goes here...
+  return new Promise((resolve, reject) => {
+    try {
+      resolve(JSON.parse(json_string));
+    } catch (err) {
+      reject(err);
+    }
+  });
 }
 
 /**
@@ -30,8 +38,9 @@ export function parsePromised() {
  * * logs the message property of the error object
  */
 
-export function onReject() {
+export function onReject(err) {
   // Your code goes here...
+  console.log(err.message);
 }
 
 /**
@@ -46,8 +55,14 @@ export function onReject() {
  * Example: export const promiseHandler = () => return <your code>
  */
 
-export const handlePromise = () => {
+export const handlePromise = (promise) => {
   // Your code goes here...
+  return promise
+    .then((data) => data)
+    .catch((err) => {
+      if (err.message) return onReject(err);
+      return err;
+    });
 };
 
 // === TEST YOURSELF ===
