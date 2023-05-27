@@ -18,12 +18,14 @@
 export const getPromise = (bool) => {
   // Your code goes here...
   const tempPromise = new Promise((resolve, reject) => {
-    resolve("The PROMISE was RESOLVED");
-    reject("The PROMISE was REJECTED");
+    if (bool) {
+      resolve("The PROMISE was RESOLVED");
+    } else {
+      reject("The PROMISE was REJECTED");
+    }
   });
 
-  if (bool) return tempPromise.then((data) => data);
-  return tempPromise.then(null, (reason) => reason);
+  return tempPromise;
 };
 
 /**
