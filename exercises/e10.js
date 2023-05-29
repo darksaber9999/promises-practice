@@ -74,7 +74,7 @@ export function handlePromise3(array) {
 
 export const newPromiseArr = promiseArr.filter(
   /* <Your code goes here>*/
-  () => Promise.any(promiseArr)
+  (pr) => pr !== promise2 && pr !== promise3
 );
 
 // Do NOT refactor or update handlePromise4 function, it's all set to work
